@@ -9,13 +9,35 @@
         <!-- <link rel="stylesheet" href=""> -->
 
         <style>
+            @import url('https://fonts.googleapis.com/css?family=Baskervville&display=swap');
             body {
+                height: 100vh;
+                font-family: 'Baskervville', serif;
                 text-align: center;
+                font-size: 1.5em;
             }
             
             #button {
-                padding: 20px;
-                margin-bottom: 50px;
+                font-family: 'Baskervville', serif;
+                padding: 16px 32px;
+                margin: 4px 2px;
+                border: 2px solid #e7e7e7;
+                text-align: center;
+                text-decoration: none;
+                font-size: 1em;
+                transition-duration: 0.4s;
+                background-color: #fff;
+                cursor: pointer;
+
+                
+                
+            }
+
+            #button:hover {background-color: #e7e7e7;}
+
+            .dices {
+                display: inline;
+                margin: 1em;
             }
 
         </style>
@@ -24,8 +46,11 @@
     </head>
     <body>
 
-        <button id="button" onclick="getRandomDice()">Random dice</button>
-        <div id="dice"></div>
+        <button id="button" onclick="getRandomDices()">Random dices</button>
+        <p>Total Score: <span id="result">0</span></p><br>
+        
+        <div class="dices" id="dice1"></div>
+        <div class="dices" id="dice2"></div>
 
 
         <script src="script.js"></script>
